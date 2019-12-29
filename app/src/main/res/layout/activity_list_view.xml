@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ListViewActivity"
+    android:background="@color/background">
+
+    <android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar_product_add"
+    android:layout_alignParentTop="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorPrimary"
+    android:minHeight="?attr/actionBarSize"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:gravity="center_vertical">
+
+        <!--<TextView
+            android:id="@+id/toolbar_product_add_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="0dp"
+            android:gravity="center_vertical|start"
+            android:layout_gravity="top"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/background"
+            android:text="Notifee"
+            android:textSize="35sp"
+            android:textStyle="italic"
+            android:onClick="scanBarcode"/>-->
+
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/notifee_logo"
+            android:paddingRight="150dp"/>
+
+
+        <TextView
+            android:text="Scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:textStyle="normal"
+            android:onClick="scanBarcode"/>
+
+
+        <!--<ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="top"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_action_add"
+            android:onClick="openAddProduct" />-->
+    </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbar_product_add">
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#b5b5b5"
+            android:dividerHeight="1dp"
+            android:listSelector="@drawable/list_selector">
+
+        </ListView>
+
+        <include
+            layout="@layout/floatingbutton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom" />
+    </FrameLayout>
+
+
+
+</RelativeLayout>
